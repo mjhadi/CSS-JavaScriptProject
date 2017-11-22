@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>H2M Website</title>
+<link rel="stylesheet" href="styles/layout.css" type="text/css">
+    <meta charset="utf-8">
+    <meta name="description" content="We aim to create a creative design and unique web sites. We build websites & apps.">
+    <meta name="keywords" content="Website, Design,search engine optimization, Mobile App, disktop app, Web Development, Website Development, web Design company" />
+    <script type="text/javascript" src="js/script.js">
+
+    </script>
+</head>
+<body onload="LoadPricing()">
+
+    <div class="wrapper row1">
+        <!-- header -->
+        <header id="header" class="clear">
+            <div id="hgroup">
+                <!-- Logo -->
+                <figure>
+                    <a href="index.html"> <img id="logo" src="images/logo_01.png" alt="logo image" title="logo image" /></a>
+                </figure>
+            </div>
+            <!-- menu -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="event.html">Event</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li class="last"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <!-- content -->
+    <div class="wrapper row2">
+        <div id="container" class="clear">
+            <!-- main content -->
+            <div id="homepage">
+                <!-- Introduction -->
+                
+                <div class="three_quarter">
+                    
+
+
+<!-- START OF ORDER FORM -->
+<form id="pricing" name="order" method="post" onsubmit="return checkform()" onreset="location.reload()">
+<td>
+<h1>Order Form</h1>
+<br />
+<br />
+</td>
+
+<!-- FORM DATE -->
+<td>
+   <span class="fmlabel">Date:</span>
+   <input class="date" name="formdate" size="10" disabled>
+</td>
+</tr>
+
+<tr>
+<!-- PRODUCT FIELDS -->
+<td valign="top" colspan="2">
+<fieldset>
+<legend>Enter the quantity of each product and press the Tab key</legend>
+<table border id="prodtable" cellpadding="5">
+<tr>
+   <th >Product</th>
+   <th>Price</th>
+   <th>Quantity</th>
+   <th>Cost</th>
+</tr>
+<tr>
+   <td>Standard Website Design</td>
+   <td><input class="numbers" name="price1" size="7" value="1500" disabled></td>
+   <td><input class="quantity" name="qty1" size="7" value="0" onblur="sub_price('price1','qty1','sub1')"></td>
+   <td><input class="numbers" name="sub1" size="7" value="0.00" disabled></td>
+</tr>
+<tr>
+   <td>Business Website Design</td>
+   <td><input class="numbers" name="price2" size="7" value="3000" disabled></td>
+   <td><input class="quantity" name="qty2" size="7" value="0" onblur="sub_price('price2','qty2','sub2')"></td>
+   <td><input class="numbers" name="sub2" size="7" value="0.00" disabled></td>
+</tr>
+<tr>
+   <td>E-Commerce Website Design</td>
+   <td><input class="numbers" name="price3" size="7" value="4500" disabled></td>
+   <td><input class="quantity" name="qty3" size="7" value="0" onblur="sub_price('price3','qty3','sub3')"></td>
+   <td><input class="numbers" name="sub3" size="7" value="0.00" disabled></td>
+</tr>
+<tr>
+   <td>Web Develpment</td>
+   <td><input class="numbers" name="price4" size="7" value="5000" disabled></td>
+   <td><input class="quantity" name="qty4" size="7" value="0" onblur="sub_price('price4','qty4','sub4')"></td>
+   <td><input class="numbers" name="sub4" size="7" value="0.00" disabled></td>
+</tr>
+<tr>
+   <td>Android Mobile Application</td>
+   <td><input class="numbers" name="price5" size="7" value="6000" disabled></td>
+   <td><input class="quantity" name="qty5" size="7" value="0" onblur="sub_price('price5','qty5','sub5')"></td>
+   <td><input class="numbers" name="sub5" size="7" value="0.00" disabled></td>
+</tr>
+<tr>
+   <td>iOS Mobile Application</td>
+   <td><input class="numbers" name="price6" size="7" value="8000" disabled></td>
+   <td><input class="quantity" name="qty6" size="7" value="0" onblur="sub_price('price6','qty6','sub6')"></td>
+   <td><input class="numbers" name="sub6" size="7" value="0.00" disabled></td>
+</tr>
+<tr>
+   <td colspan="3" align="right"><span class="fmlabel">Sales Tax (15%):</span>
+   </td>
+   <td><input class="numbers" name="sub7" size="7" value="0.00" disabled></td>
+</tr>
+<tr>
+   <td colspan="3" align="right"><span class="fmlabel">Timing:</span>
+      <select name="shipping" onchange="shipping_price()">
+         <option value="0">Choose a Timing option
+         <option value="0.0">Standard (1-2 months) $0.0
+         <option value="99.95">Express (2 weeks) $99.95
+         <option value="199.95">Next week (1 week) $199.95
+      </select>
+   </td>
+   <td><input class="numbers" name="sub8" size="7" value="0.00" disabled></td>
+</tr>
+<tr>
+   <th id="TOTAL" colspan="3">TOTAL</th>
+   <td><input class="numbers" name="total" size="7" value="0.00" disabled></td>
+</tr>
+</table>
+</td>
+</tr>
+                    
+                        <tr>
+                            <!-- Clients Information -->
+                            <td valign="top" colspan="2">
+                                <fieldset>
+                                    <legend>Clients Information</legend>
+                                    <table>
+                                        <tr>
+                                            <td><span class="fmlabel">E-mail:</span></td>
+                                            <td>
+                                                <input type="email" id="email" name="email" size="40" required="required" placeholder="name@domain.com" onblur="verifMail(this);">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="fmlabel">Name:</span></td>
+                                            <td>
+                                                <input name="name" size="40" required="required" placeholder="Name">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top"><span class="fmlabel">Comments:</span></td>
+                                            <td>
+                                                <textarea rows="3" cols="40" name="Comments"></textarea>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </fieldset>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <!-- CREDIT CARD FIELDS -->
+                            <td valign="top" colspan="2">
+                                <fieldset>
+                                    <legend>Credit Card Information</legend>
+                                    <table>
+                                        <tr>
+
+                                            <!-- CARD TYPE -->
+                                            <td valign="top"><span class="fmlabel">Card:</span></td>
+                                            <td colspan="3">
+                                                <select name="ccard">
+                                                    <option value="">Select a Credit Card
+                                                    <option value="ae">American Express
+                                                    <option value="mc">MasterCard
+                                                    <option value="vi">Visa
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+
+                                            <!-- NAME ON CARD -->
+                                            <td valign="top"><span class="fmlabel">Name:</span></td>
+                                            <td colspan="3">
+                                                <input size="40" name="cname">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+
+                                            <!-- CARD NUMBER -->
+                                            <td valign="top"><span class="fmlabel">Number:</span></td>
+
+                                            <!-- CARD EXPIRATION DATE -->
+                                            <td colspan="3">
+                                                <input type="password" size="20" name="cnumber">
+                                                <span class="fmlabel">Expiration:</span>
+                                                <select name="expmonth">
+                                                    <option>01
+                                                    <option>02
+                                                    <option>03
+                                                    <option>04
+                                                    <option>05
+                                                    <option>06
+                                                    <option>07
+                                                    <option>08
+                                                    <option>09
+                                                    <option>10
+                                                    <option>11
+                                                    <option>12
+                                                </select>
+
+                                                <select name="expyear">
+                                                    <option>2017
+                                                    <option>2018
+                                                    <option>2019
+                                                    <option>2020
+                                                    <option>2021
+                                                    <option>2022
+                                                    <option>2023
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <!-- BUTTONS TO SUBMIT OR CANCEL THE ORDER -->
+                            <td colspan="2">
+                                <input type="submit" value="Submit Order">
+                                &nbsp;&nbsp;
+                                <input type="reset" value="Cancel Order">
+                            </td>
+                        </tr>
+
+                        </form>
+
+                        </table>
+</div>
+
+            <!-- / Introduction -->
+
+                <div class="one_quarter lastbox">
+                  <h1>What do you think about Our Prices?</h1>
+<form>
+<input type="radio" name="browser"  value="Amazing">Amazing<br>
+<input type="radio" name="browser"  value="Acceptable">Acceptable<br>
+<input type="radio" name="browser"  value="high">high<br>
+<input type="radio" name="browser"  value="Too high">Too high<br>
+<br>
+Send your answer: <input id="answer"  type="submit" value="Submit" onclick="send()">
+</form>
+                </div>     
+            </div>
+        </div>
+        <!-- end content body -->
+    </div>
+    <!-- Footer -->
+    <div class="wrapper row3">
+        <div id="footer" class="clear">
+            <!-- Section One -->
+            <section class="one_quarter">
+                <h3>CANADA</h3>
+                <p>
+                    <img src="images/home.png" alt="home"> 21 275 Lakeshore Road
+                    Sainte- Qubec H9X 3L9 Canada
+                </p>
+                <p><img src="images/mail.png" alt="email"> <a href="mailto:info@h2m.com" title="email" target="_blank">canada@h2m.com</a></p>
+                <p><img src="images/phone.png" alt="phone"> 1-(514)-619-6420</p>
+                <p><img src="images/twitter.png" alt="twitter"> <a href="http://www.twitter.com" title="twitter.com" target="_blank">twitter.com/h2m_canada</a></p>
+            </section>
+            <!-- Section Two -->
+            <section class="one_quarter">
+                <h3>EGYPT</h3>
+                <p><img src="images/home.png" alt="home"> 1440 Broadway, 23rd Floor, Cairo, EGYPT. P.O BOX 221711</p>
+                <p><img src="images/mail.png" alt="email"> <a href="mailto:info@h2m.com" title="email" target="_blank">egypt@h2m.com</a></p>
+                <p><img src="images/phone.png" alt="phone"> 2-(012)-2416-1069</p>
+                <p><img src="images/twitter.png" alt="twitter"> <a href="http://www.twitter.com" title="twitter.com" target="_blank">twitter.com/h2m_egypt</a></p>
+            </section>
+            <!-- Section Three -->
+            <section class="one_quarter">
+                <h3>IRAN</h3>
+                <p><img src="images/home.png" alt="home"> 151 Slater St., suite 802, Tahran, IRAN P.O BOXK1P 5H3</p>
+                <p><img src="images/mail.png" alt="email"> <a href="mailto:info@h2m.com" title="email" target="_blank">iran@h2m.com</a></p>
+                <p>
+                    <img src="images/phone.png" alt="phone"> 98-(21)-4412-2098<br>
+                </p>
+                <p><img src="images/twitter.png" alt="twitter"> <a href="http://www.twitter.com" title="twitter.com" target="_blank">twitter.com/h2m_iran</a></p>
+            </section>
+            <!-- Section Four -->
+            <section class="one_quarter lastbox">
+                <h3>TUNIS</h3>
+                <p><img src="images/home.png" alt="home"> 4144, Zarzis, 20rd Floor Mednine, Tunis P.O BOX 414441</p>
+                <p><img src="images/mail.png" alt="email"> <a href="mailto:info@h2m.com" title="email" target="_blank">tunis@h2m.com</a></p>
+                <p>
+                    <img src="images/phone.png" alt="phone"> +(216)-5237-5324<br>
+                </p>
+                <p><img src="images/twitter.png" alt="twitter"> <a href="http://www.twitter.com" title="twitter.com" target="_blank">twitter.com/h2m_tunis</a></p>
+            </section>
+            <!-- / Section -->
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="wrapper row4">
+        <footer id="copyright" class="clear">
+            <p class="fl_left"> Copyright &copy; 2017 - All Rights Reserved - <a href="index.html">H2M Website</a></p>
+            <p class="fl_right">
+                <a href="http://facebook.com"><img src="images/facebook-icon.svg" alt="Facebook"></a>
+                <a href="http://linkedin.com"><img src="images/linkedin-icon.svg" alt="linkedin"></a>
+                <a href="http://youtube.com"><img src="images/youtube-icon.svg" alt="youtube"></a>
+                <a href="https://twitter.com"><img src="images/twitter-icon.svg" alt="twitter"></a>
+                <a href="https://plus.google.com"><img src="images/googleplus-icon.svg" alt="googelplus"></a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
